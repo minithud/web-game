@@ -13,6 +13,13 @@
       "@babel/plugin-proposal-class-properties", {
         "loose": true
       }
+    ],
+    [
+      "babel-plugin-import",
+      {
+        "libraryName": "antd",
+        "style": true,   // or 'css'
+      }
     ]
   ]
 }

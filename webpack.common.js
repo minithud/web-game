@@ -41,6 +41,36 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          }
+        ],
+      },
+      {
+        test:  [
+          /\.eot$/,
+          /\.gif$/,
+          /\.jpg$/,
+          /\.png$/,
+          /\.svg$/,
+          /\.ttf$/,
+          /\.typeface$/,
+          /\.woff$/,
+          /\.woff2$/,
+          /\.xcf$/,
+        ],
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
       }
     ]
   },
