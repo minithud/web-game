@@ -36,10 +36,7 @@ module.exports = {
         exclude: /(node_modules)/,
         include: path.resolve(__dirname, 'src'),
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
+          loader: 'babel-loader'
         }
       },
       {
@@ -50,6 +47,20 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+          }
+        ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'less-loader',
           }
         ],
       },

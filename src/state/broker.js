@@ -1,12 +1,15 @@
 import {
     action,
-    observable,
-    // computed
+	observable,
+	// computed
 } from 'mobx';
 
+class BrokerStore {
+    @observable brokers = [];
 
-class Player {
-    @observable money = 100;
+}
+class Brokers {
+    @observable brokers = 100;
 
     @action.bound
     spend(amount) {
@@ -23,6 +26,9 @@ class Player {
         money += amount
     }
 
+    // @computed get isDead() {
+    // 	return this.health <= 0;
+    // }
 }
 
-export default new Player();
+export default new Brokers();

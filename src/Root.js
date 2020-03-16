@@ -1,25 +1,15 @@
-import React, { Component } from 'react';
-import { observer } from "mobx-react";
+import React, {Component} from 'react';
 import DevTools from 'mobx-react-devtools';
 import { Button, ControlGroup } from "@blueprintjs/core";
+import Header from './components/Header';
 
-@observer
 class Root extends Component {
   render() {
     return (
       <ControlGroup fill={true} vertical={true}>
         <DevTools />
-        <ControlGroup fill={true} vertical={false}>
-          <Button
-            onClick={() => this.props.store.health++}
-          >
-            hey
-          </Button>
-          <div>{this.props.store.health}/{this.props.store.maxHealth}</div>
-        </ControlGroup>
-        <ControlGroup fill={true} vertical={false}>
-          body
-        </ControlGroup>
+        <Header />
+
         <ControlGroup fill={true} vertical={false}>
 
         </ControlGroup>
